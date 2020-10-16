@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class ex_1_11 {
-  public static void main(String args[]){
+public class Ex11 {
+  public static void main(String[] args){
     Scanner scanner = new Scanner(System.in);
 
     System.out.print("\n\nValor em Dólares: ");
@@ -12,7 +12,7 @@ public class ex_1_11 {
 
     double euros = dolares*taxa;
 
-    System.out.printf("\n%4.2f dólares equivalem a %4.2f euros\n\n",dolares,euros);
+    System.out.printf("%n%4.2f dólares equivalem a %4.2f euros%n%n", dolares, euros);
  
     scanner.close();
   }

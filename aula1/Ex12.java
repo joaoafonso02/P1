@@ -11,7 +11,7 @@ public class Ex12 {
     int minutes = (allSeconds % 3600) / 60;
     int seconds = allSeconds%60;
 
-    System.out.printf("%n%n%dh:%dm:%ds%n%n",hours,minutes,seconds);
+    System.out.printf("%n%dh:%dm:%ds%n%n",hours,minutes,seconds);
 
     scanner.close();
   }

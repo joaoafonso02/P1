@@ -9,7 +9,7 @@ public class Ex10 {
 
     double fahrenheit = 1.8f*celcius+32;
 
-    System.out.printf("%n%2.1fº Celcius é equivalente a %2.1fº Fahrenheit%n%n",celcius,fahrenheit);
+    System.out.printf("%n%.2fº Celcius é equivalente a %.2fº Fahrenheit%n%n",celcius,fahrenheit);
 
     scanner.close();
   }

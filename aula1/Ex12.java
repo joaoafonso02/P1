@@ -8,10 +8,10 @@ public class Ex12 {
     int allSeconds = scanner.nextInt();
 
     int hours = allSeconds/3600;
-    int minutes = (allSeconds % 3600) / 60;
+    int minutes = (allSeconds / 60) % 60;
     int seconds = allSeconds%60;
 
-    System.out.printf("%n%dh:%dm:%ds%n%n",hours,minutes,seconds);
+    System.out.printf("%n%02d:%02d:%02d%n%n",hours,minutes,seconds);
 
     scanner.close();
   }

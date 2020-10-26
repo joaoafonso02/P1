@@ -11,7 +11,7 @@ public class Ex9 {
         double altura = scanner.nextDouble();
 
         System.out.printf("%nPerimetro = %.2f%nAltura = %.2f%n%n", comprimento*2+altura*2,comprimento*altura);
-        
+
         scanner.close();
     }
 }

@@ -3,57 +3,72 @@ import java.util.Scanner;
 public class Ex10 {
     public static final Scanner KB = new Scanner(System.in);
     public static void main(String[] args) {
-        // request inputs
+        // inputs
         System.out.print("\nDay: ");
         int day = KB.nextInt();
         System.out.print("Mês: ");
         int month = KB.nextInt();
         System.out.print("Ano: ");
         int year = KB.nextInt();
-
-        if(month==2){
-            int diaBisseixto = 0;
-            if(year%4==0){
-                diaBisseixto = 1;
-            }
-            int prevDay = (day)%(28+diaBisseixto)+1;
-            int prevMonth = (day+1)>28+diaBisseixto ? month+1 : month;
-            int nextDay = (day)%(28+diaBisseixto)+1;
-            int nextMonth = (day+1)>28+diaBisseixto ? month+1 : month;
-            System.out.printf("%nDia anterior é %d / %d / %d%n%n", prevDay, prevMonth, year);
-            System.out.printf("%nDia seguinte é %d / %d / %d%n%n", nextDay, nextMonth, year);
-        }else if(month==1||month==3||month==5||month==7||month==8||month==10||month==12){
-            System.out.printf("%nO mês %d do ano %d tem 31 dias.%n%n", month, year);
-        }else{
-            System.out.printf("%nO mês %d do ano %d tem 30 dias.%n%n", month, year);
+        
+        int diasMesAnterior = -1;
+        int diasMesAtual = -1;
+        switch(month){
+            case 1:
+            case 8:
+                diasMesAnterior = 31;
+                diasMesAtual = 31;
+                break;
+            case 2:
+                diasMesAnterior = 31;
+                diasMesAtual = year%4==0 ? 29 : 28;
+                break;
+            case 3:
+                diasMesAnterior = year%4==0 ? 29 : 28;
+                diasMesAtual = 31;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                diasMesAnterior = 31;
+                diasMesAtual = 30;
+                break;
+            case 5:
+            case 7:
+            case 10:
+            case 12:
+                diasMesAnterior = 30;
+                diasMesAtual = 31;
+                break;
+            default:
+                System.out.print("\n\nBAD THIGS ARE APPENING!!!!\n\n");
         }
+
+        int prevDay = day-1;
+        int nextDay = day+1;
+        int prevMonth = month;
+        int nextMonth = month;
+        int prevYear = year;
+        int nextYear = year;
+
+        if(prevDay<1){
+            prevMonth = month-1;
+            if(prevMonth<1){
+                prevMonth = 12;
+                prevYear = year-1;
+            }
+            prevDay = diasMesAnterior;
+        }else if(nextDay>diasMesAtual){
+            nextMonth = month+1;
+            if(nextMonth>12){
+                nextMonth = 1;
+                nextYear = year+1;
+            }
+            nextDay = 1;
+        }
+
+        System.out.printf("\nDia anterior: %02d/%02d/%04d",prevDay,prevMonth,prevYear);
+        System.out.printf("\nDia seguinte: %02d/%02d/%04d\n\n",nextDay,nextMonth,nextYear);
     }
-
-        /*if(month==2){
-            int diaBisseixto = 0;
-            if(year%4==0){
-                diaBisseixto = 1;
-            }
-            if(day==28+diaBisseixto){
-                System.out.printf("%nO dia anterior é %d-%d-%d",day-1,month,year);
-                System.out.printf("%nO dia anterior é %d-%d-%d",1,month+1,year);
-            }else if(day==1){
-                System.out.printf("%nO dia anterior é %d-%d-%d",31,month-1,year);
-                System.out.printf("%nO dia anterior é %d-%d-%d",2,month,year);
-            }else{
-                System.out.printf("%nO dia anterior é %d-%d-%d",day-1,month,year);
-                System.out.printf("%nO dia anterior é %d-%d-%d",day+1,month,year);
-            }
-        }else if(month==1||month==3||month==5||month==7||month==8||month==10||month==12){
-            if(day==1){
-                if(month==1){
-                    
-                }
-                System.out.printf("%nO dia anterior é %d-%d-%d",day-1,month,year);
-                System.out.printf("%nO dia anterior é %d-%d-%d",1,month+1,year);
-            }
-        }else{
-            System.out.printf("%nO mês %d do ano %d tem 30 dias.%n%n", month, year);
-        }
-    }*/
 }

@@ -11,8 +11,10 @@ public class Ex11 {
         System.out.print("Introduza:\n C: ");
         double c = KB.nextDouble();
 
-        double x1 = (-b-Math.sqrt((b*b-4*a*c)))/(2*a);
-        double x2 = (-b+Math.sqrt((b*b-4*a*c)))/(2*a);
+        double delta = Math.pow(b,2)-4*a*c;
+
+        double x1 = (-b-Math.sqrt(delta))/(2*a);
+        double x2 = (-b+Math.sqrt(delta))/(2*a);
 
         System.out.printf("%nA solução é x=%.2f e x=%.2f %n",x1,x2);
     }

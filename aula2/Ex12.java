@@ -40,4 +40,21 @@ public class Ex12 {
 
         
     }
+
+    public boolean twoLinesIntersect(double ax,double ay, double bx, double by, double cx,double cy,double dx,double dy){
+        double a1 = by - ay;
+        double b1 = ax - bx;
+        double c1 = a1*(ax) + b1*(ay);
+
+        double a2 = dy - cy;
+        double b2 = cx - dx;
+        double c2 = a2*(cx) + b2*(cy);
+
+        double determinant = a1*b2 - a2*b1;
+
+        if(determinant==0){
+            return false;
+        }
+        return true;
+    }
 }

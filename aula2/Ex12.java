@@ -52,9 +52,6 @@ public class Ex12 {
 
         double determinant = a1*b2 - a2*b1;
 
-        if(determinant==0){
-            return false;
-        }
-        return true;
+        return determinant==0;
     }
 }

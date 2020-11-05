@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex5 {
+public class Ex05 {
     public static final Scanner KB = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.print("\n\nIntroduza Numero: ");

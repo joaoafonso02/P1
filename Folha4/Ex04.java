@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex4 {
+public class Ex04 {
     public static final Scanner KB = new Scanner(System.in);
     public static void main(String[] args) throws InterruptedException {
         System.out.print("\nGenerating Number");

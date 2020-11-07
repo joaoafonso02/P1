@@ -21,26 +21,44 @@ public class Ex12 {
             switch(month){
                 case 1:
                     monthName = "Janeiro";
+                    monthsDays = 31;
+                    break;
                 case 3:
                     monthName = "Março";
+                    monthsDays = 31;
+                    break;
                 case 5:
                     monthName = "Maio";
+                    monthsDays = 31;
+                    break;
                 case 7:
                     monthName = "Julho";
+                    monthsDays = 31;
+                    break;
                 case 8:
                     monthName = "Agosto";
+                    monthsDays = 31;
+                    break;
                 case 10:
                     monthName = "Outubro";
+                    monthsDays = 31;
+                    break;
                 case 12:
                     monthName = "Dezembro";
                     monthsDays = 31;
                     break;
                 case 4:
                     monthName = "Abril";
+                    monthsDays = 30;
+                    break;
                 case 6:
                     monthName = "Junho";
+                    monthsDays = 30;
+                    break;
                 case 9:
                     monthName = "Setembro";
+                    monthsDays = 30;
+                    break;
                 case 11:
                     monthName = "Novembro";
                     monthsDays = 30;
@@ -66,7 +84,7 @@ public class Ex12 {
             System.out.print("|Su Mo Tu We Th Fr Sa|\n");
             System.out.print("----------------------\n");
             for (int i = 0; i < 6; i++) {
-                if( i*7>monthsDays+day ){break;}
+                if( i*7>monthsDays+day-2 ){break;}
                 System.out.print("|");
                 for (int j = 0; j < 7; j++) {
                     int n = i*7+j;

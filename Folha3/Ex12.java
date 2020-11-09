@@ -6,7 +6,7 @@ public class Ex12 {
         while(true){
             System.out.print("\n\nIntroduza Dia da semana: ");
             int day = KB.nextInt();
-            System.out.print("Introduza Mẽs: ");
+            System.out.print("Introduza Mês: ");
             int month = KB.nextInt();
             System.out.print("Introduza Year: ");
             int year = KB.nextInt();

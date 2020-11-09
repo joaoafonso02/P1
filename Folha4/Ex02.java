@@ -6,11 +6,15 @@ public class Ex02 {
         System.out.print("\nIntroduza uma lista de números (terminada com 0):\n");
 
         double product = 1;
-        while(true){
-            double n = KB.nextDouble();
-            if(n==0){break;}
+        double n = 1;
+        do{
+            n = KB.nextDouble();
+            if( n==0 ){
+                System.err.print("Erro numero invalido");
+                break;
+            }
             product *= n;
-        }
+        }while( n!=0 );
         
         System.out.printf("Produto = %.3f\n\n", product);
     }

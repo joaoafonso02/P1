@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex9 {
+public class Ex09 {
     public static final Scanner KB = new Scanner(System.in);
     public static void main(String[] args) {
         while(true){

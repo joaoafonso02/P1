@@ -17,7 +17,7 @@ public class Ex09 {
                 System.out.print("\nInvalid Grade! Try again");
             }
             soma += n;
-            counter++;
+            counter;
         }
         System.out.printf("\nSoma = %d\nMédia = %.1f\n\n",soma,(double)soma/counter);
     }

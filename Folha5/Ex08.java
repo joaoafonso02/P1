@@ -5,16 +5,17 @@ public class Ex08 {
 
     public static void main(String[] args) {
         System.out.print("\n\nIntroduza valor inicial de x: ");
-        double xInicial = getIntRange(Integer.MIN_VALUE, Integer.MAX_VALUE);
+        double xInicial = KB.nextDouble();
         System.out.print("Introduza valor final de x: ");
-        double xFinal = getIntRange(Integer.MIN_VALUE, Integer.MAX_VALUE);
-        System.out.print("Introduza numero de elementos: ");
-        int nElementos = getIntRange(2, Integer.MAX_VALUE);
-
+        double xFinal = KB.nextDouble();
+        
         if(xInicial>xFinal){
             System.out.print("\nValores impossiveis de x!");
             return;
         }
+        
+        System.out.print("Introduza numero de elementos: ");
+        int nElementos = getIntRange(2, Integer.MAX_VALUE);
 
         System.out.print("\n------------------------------------\n");
         System.out.print("|   x   | 5x2+10x+3 | 7x3+3x2+5x+2 |\n");

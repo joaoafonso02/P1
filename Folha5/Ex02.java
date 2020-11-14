@@ -48,11 +48,11 @@ public class Ex02 {
     }
 
     public static int getIntRange(int min, int max){
-        int n = 0;
-        do{
-            System.out.print("Introduza Numero Inteiro entre ("+min+","+max+"): ");
+        int n = KB.nextInt();
+        while( n<min||n>max ){
+            System.out.printf("Número inválido. Introduza inteiro (%d a %d): ",min,max);
             n = KB.nextInt();
-        }while( n<min || n>max );
+        }
         return n;
     }
 

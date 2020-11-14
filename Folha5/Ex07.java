@@ -1,18 +1,19 @@
 import java.util.Scanner;
 
-public class Ex04 {
+public class Ex07 {
     public static final Scanner KB = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("\nIntroduza n (1 a 10): ");
-        int m = getIntRange(1, 10);
+        System.out.print("\n\nIntroduza a: ");
+        int a = getIntRange(1, Integer.MAX_VALUE);
+        System.out.print("Introduza b: ");
+        int b = getIntRange(1, Integer.MAX_VALUE);
 
-        for(int i=m; i>0 ;i--){
-            System.out.printf("\n%d! = %d", i, fact(i));
-        }
-
+        System.out.print("\n");
+        System.out.printf("MDC = %d", mdc(a, b));
         System.out.print("\n\n");
     }
+    
 
     public static int getIntRange(int min, int max){
         int n = KB.nextInt();
@@ -23,11 +24,12 @@ public class Ex04 {
         return n;
     }
 
-    public static int fact(int n){
-        int fact = 1;
-        for(int i=1;i<=n;i++){
-            fact *= i;
+    public static int mdc(int a, int b){
+        while(b!=0){
+            int temp = a;
+            a = b;
+            b = temp%b;
         }
-        return fact;
+        return a;
     }
 }

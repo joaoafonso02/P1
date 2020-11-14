@@ -11,7 +11,7 @@ public class Ex02 {
                 System.out.print("\n\n-------------------\n");
                 System.out.printf("|  Tabuada dos %2d |\n", n);
                 System.out.print("-------------------\n");
-                for(int i=0; i<10 ;i++){
+                for(int i=1; i<=10 ;i++){
                     System.out.printf("| %2d x %2d  |  %3d |\n", n, i, n*i);
                 }
                 System.out.print("-------------------\n");
